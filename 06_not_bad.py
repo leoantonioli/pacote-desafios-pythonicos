@@ -10,8 +10,14 @@ Exemplo: 'The dinner is not that bad!' retorna 'The dinner is good!'
 """
 
 def not_bad(s):
-    # +++ SUA SOLUÇÃO +++
-    return
+    notPos = s.find('not') # encontra posição de not
+    badPos = s.find('bad') # encontra posição de bad
+    if notPos < badPos: # verifica se not vem antes de bad
+      trecho = s[notPos:badPos+3] # pega o trecho que vai de not até 3 caracteres após o início de bad
+      resp = s.replace(trecho, 'good')
+    else:
+      resp = s
+    return resp
 
 
 # --- Daqui para baixo são apenas códigos auxiliáries de teste. ---
