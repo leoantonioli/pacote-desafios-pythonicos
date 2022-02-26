@@ -13,9 +13,9 @@ a-frente + b-frente + a-trás + b-trás
 def front_back(a, b):
     import math
     
-    divA = math.ceil(len(a)/2)
-    a1 = a[:divA]
-    a2 = a[divA:]
+    divA = math.ceil(len(a)/2) # encontra o índice da metade da string, arredondando para o número inteiro acima com math.ceil
+    a1 = a[:divA] # fatia do início da string até o índice
+    a2 = a[divA:] # fatia do índice até o fim da string
     divB = math.ceil(len(b)/2)
     b1 = b[:divB]
     b2 = b[divB:]
