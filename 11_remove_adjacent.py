@@ -9,8 +9,13 @@ Irá retornar: [1, 2, 3]
 """
 
 def remove_adjacent(nums):
-    # +++ SUA SOLUÇÃO +++
-    return
+    lista = [] #  Cria uma nova lista vazia
+    #for i in range(len(nums)): #  Usa índice ao invés de "for num in nums" para poder usar o índice na comparação
+    for i, n in enumerate(nums): #  Usa função enumerate que cria associa índices aos elementos http://devfuria.com.br/python/built-in-enumerate/
+        if  i == 0 or nums[i] != nums[i - 1]: #  Se for o primeiro elemento OU se o elemento atual for igual ao elemento anterior...
+            lista.append(nums[i]) #  ...coloca o número na nova lista
+    return lista
+
 
 
 # --- Daqui para baixo são apenas códigos auxiliáries de teste. ---
