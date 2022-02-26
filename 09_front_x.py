@@ -14,11 +14,11 @@ antes de combina-las.
 def front_x(words):
     listaX = [] # Cria lista vazia para palavras com X
     lista2 = [] # Cria lista vazia pro resto
-    for i in range(len(words)): #  Cria índice para percorrer lista
-        if words[i][0] == "x": # Se a palavra da vez começa com X...
-            listaX.append(words[i]) # Coloca a palavra na Lista X
+    for word in words: #  Para cada palavra na lista de palavras...
+        if word[0] == "x": # Se a palavra da vez começa com X...
+            listaX.append(word) # ...coloca a palavra na Lista X
         else:
-            lista2.append(words[i]) # Senão coloca na Lista 2
+            lista2.append(word) # ...senão coloca na Lista 2
     listaX.sort() # Ordena as listas
     lista2.sort()
     return listaX + lista2
