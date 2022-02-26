@@ -9,8 +9,13 @@ PS: Python não possui o operador ++, porém += funciona.
 """
 
 def match_ends(words):
-    # +++ SUA SOLUÇÃO +++
-    return
+    contador = 0
+    qtde = len(words) # Pega a quantidade de palavras na lista
+    for i in range(qtde): # Cria um índice para parsear a lista
+        if len(words[i]) >= 2: # Se o comprimento da palavra "da vez" for maior ou igual a dois...
+            if words[i][0] == words[i][-1:]: # Se a primeira letra da palavra for igual à última letra...
+                contador += 1
+    return contador
 
 
 # --- Daqui para baixo são apenas códigos auxiliáries de teste. ---
