@@ -11,8 +11,15 @@ Finalmente, dadas duas strings a e b, retorne uma string na forma:
 a-frente + b-frente + a-trás + b-trás
 """
 def front_back(a, b):
-    # +++ SUA SOLUÇÃO +++
-    return
+    import math
+    
+    divA = math.ceil(len(a)/2)
+    a1 = a[:divA]
+    a2 = a[divA:]
+    divB = math.ceil(len(b)/2)
+    b1 = b[:divB]
+    b2 = b[divB:]
+    return a1 + b1 + a2 + b2
 
 
 # --- Daqui para baixo são apenas códigos auxiliáries de teste. ---
